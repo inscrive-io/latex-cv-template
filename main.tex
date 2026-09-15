@@ -1,0 +1,58 @@
+% =====================================================================
+%  ACADEMIC CV  --  template for inscrive.io
+%  ---------------------------------------------------------------
+%  Engine   : pdfLaTeX          Bibliography : biber
+%  Structure: main.tex holds your details and the section order.
+%             Each section is one file in sections/.
+%             All design lives in style/academiccv.sty.
+%
+%  To make this yours:
+%    1. Replace figures/logo-placeholder.pdf with your institution logo,
+%       or delete the \cvlogo line to leave it out.
+%    2. Edit the brand colours in style/academiccv.sty (section 1).
+%    3. Fill in the details below, then edit sections/.
+% =====================================================================
+% Optional: produce a tagged (structured) PDF, which screen readers and
+% accessibility checkers can navigate. Uncomment the line below. It needs
+% a LaTeX kernel from 2023-06 or newer, and it must be the very first
+% line of the file. Tested and clean for this template.
+% \DocumentMetadata{lang=en-GB,pdfversion=2.0,testphase={phase-III,title}}
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{style/academiccv}
+\addbibresource{publications.bib}
+
+% ---------------------------------------------------------------------
+%  YOUR DETAILS  --  the header reads from here. Leave any line empty
+%  and that item simply disappears.
+% ---------------------------------------------------------------------
+\cvname       {A.\,N.\ Author}
+\cvrole       {Postdoctoral Researcher, Document Engineering}
+\cvaffiliation{Your University \textperiodcentered\ Faculty or Department}
+\cvemail      {a.n.author@your-university.edu}
+\cvphone      {+45 12 34 56 78}
+\cvweb        {your-university.edu/author}
+\cvorcid      {0000-0002-1825-0097}
+\cvgithub     {your-handle}
+\cvlocation   {Aarhus, Denmark}
+\cvlogo       {figures/logo-placeholder.pdf}
+
+% Your family name, printed in bold everywhere it appears in the
+% publication lists. Must match the spelling used in publications.bib.
+\cvbibname    {Author}
+
+\begin{document}
+
+\makecvheader
+
+\input{sections/01-profile}
+\input{sections/02-appointments}
+\input{sections/03-education}
+\input{sections/04-publications}
+\input{sections/05-grants}
+\input{sections/06-teaching}
+\input{sections/07-service}
+\input{sections/08-skills}
+
+\end{document}
